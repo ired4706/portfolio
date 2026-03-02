@@ -20,16 +20,16 @@ export function HeroSection() {
         </header>
       </div>
       <aside className="flex flex-col gap-3 text-xs text-muted-foreground md:text-sm">
-        <div className="rounded-lg border border-border/70 bg-slate-950/60 px-4 py-3">
+        <div className="rounded-lg border border-border/70 bg-card px-4 py-3">
           <p className="font-medium text-foreground">Core Expertise</p>
-          <p>
+          <p className="text-muted-foreground">
             Scalable React architecture · UI libraries · Feature flags ·
             Performance
           </p>
         </div>
-        <div className="rounded-lg border border-border/70 bg-slate-950/60 px-4 py-3">
+        <div className="rounded-lg border border-border/70 bg-card px-4 py-3">
           <p className="font-medium text-foreground">E-commerce Platforms</p>
-          <p>
+          <p className="text-muted-foreground">
             Unified management systems · Analytics dashboards · Third-party
             integrations
           </p>

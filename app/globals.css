@@ -3,6 +3,19 @@
 @tailwind utilities;
 
 :root {
+  /* Light theme */
+  --background: 210 40% 98%;
+  --foreground: 222.2 47.4% 11.2%;
+  --muted: 210 40% 96.1%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+  --accent: 222.2 84% 56.1%;
+  --accent-foreground: 210 40% 98%;
+  --border: 214.3 31.8% 91.4%;
+  --card: 0 0% 100%;
+  --card-foreground: 222.2 47.4% 11.2%;
+}
+
+.dark {
   --background: 222.2 84% 4.9%;
   --foreground: 210 40% 98%;
   --muted: 217.2 32.6% 17.5%;
@@ -19,15 +32,15 @@ html {
 }
 
 body {
-  @apply bg-background text-foreground antialiased text-sm leading-relaxed sm:text-base;
+  @apply bg-background text-foreground antialiased text-sm leading-relaxed tracking-[0.01em] sm:text-base;
 }
 
 .page-shell {
-  @apply min-h-screen bg-slate-950 text-foreground;
+  @apply min-h-screen bg-background text-foreground transition-colors duration-300;
 }
 
 .glass {
-  @apply border border-border/70 bg-slate-900/60 backdrop-blur-xl shadow-soft;
+  @apply border border-border/70 bg-card/90 backdrop-blur-xl shadow-soft;
 }
 
 .prose-muted {
@@ -39,11 +52,21 @@ body {
 }
 
 .section-block + .section-block {
-  @apply border-t border-slate-800/60;
+  @apply border-t border-border/60;
 }
 
 .section-block-muted {
-  @apply bg-slate-900/30;
+  @apply bg-muted/60;
+}
+
+@layer components {
+  .fade-section {
+    @apply opacity-0 translate-y-4 transition-all duration-500 ease-out;
+  }
+
+  .fade-section-visible {
+    @apply opacity-100 translate-y-0;
+  }
 }
 
 /* Typography scale */
@@ -60,7 +83,7 @@ body {
 }
 
 .type-body {
-  @apply text-sm leading-relaxed sm:text-base;
+  @apply text-sm leading-relaxed tracking-[0.01em] sm:text-base;
 }
 
 /* Rich text blocks in sections */
@@ -96,4 +119,38 @@ body {
   left: 0;
   top: 0;
   color: rgb(148 163 184); /* slate-400 */
+}
+
+@layer components {
+  .nav-link {
+    @apply relative rounded-full px-3 py-1.5 text-[11px] text-muted-foreground transition-colors duration-150;
+  }
+
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0.9rem;
+    right: 0.9rem;
+    bottom: 0.4rem;
+    height: 1px;
+    background-color: hsl(217.2 91.2% 59.8%); /* accent */
+    transform: scaleX(0);
+    transform-origin: center;
+    opacity: 0;
+    transition: transform 150ms ease-out, opacity 150ms ease-out;
+  }
+
+  .nav-link:hover::after {
+    transform: scaleX(1);
+    opacity: 0.5;
+  }
+
+  .nav-link-active {
+    @apply bg-accent/10 text-foreground shadow-[0_8px_20px_rgba(15,23,42,0.25)];
+  }
+
+  .nav-link-active::after {
+    transform: scaleX(1);
+    opacity: 0.85;
+  }
 }

@@ -14,7 +14,7 @@ export function ExperienceSection() {
         {experience.map((role) => (
           <li
             key={`${role.company}-${role.role}`}
-            className="rounded-lg border border-border/70 bg-slate-950/60 p-4"
+            className="rounded-lg border border-border/70 bg-card p-4"
           >
             <div className="flex flex-wrap items-center justify-between gap-2">
               <div>

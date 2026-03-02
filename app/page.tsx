@@ -6,32 +6,33 @@ import { ArchitectureCaseStudySection } from "@/components/sections/architecture
 import { ContactSection } from "@/components/sections/contact";
 import { Navbar } from "@/components/ui/navbar";
 import { Footer } from "@/components/ui/footer";
+import { AnimatedSection } from "@/components/ui/animated-section";
 
 export default function HomePage() {
   return (
     <>
       <Navbar />
       <main className="flex-1">
-        <div className="mx-auto flex w-full max-w-5xl flex-col px-4 pb-12 pt-6 sm:px-6 sm:pb-16 lg:px-8">
+        <div className="mx-auto flex w-full max-w-page flex-col px-4 pb-12 pt-6 sm:px-6 sm:pb-16 lg:px-8">
           <div className="flex flex-col gap-10 sm:gap-12">
-            <section className="section-block">
+            <AnimatedSection>
               <HeroSection />
-            </section>
-            <section className="section-block">
+            </AnimatedSection>
+            <AnimatedSection>
               <TechnicalHighlightsSection />
-            </section>
-            <section className="section-block">
+            </AnimatedSection>
+            <AnimatedSection>
               <ProjectsSection />
-            </section>
-            <section className="section-block">
+            </AnimatedSection>
+            <AnimatedSection>
               <ArchitectureCaseStudySection />
-            </section>
-            <section className="section-block">
+            </AnimatedSection>
+            <AnimatedSection>
               <AboutSection />
-            </section>
-            <section className="section-block">
+            </AnimatedSection>
+            <AnimatedSection>
               <ContactSection />
-            </section>
+            </AnimatedSection>
           </div>
         </div>
       </main>

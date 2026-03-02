@@ -9,29 +9,32 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["system-ui", "ui-sans-serif", "sans-serif"]
+        sans: ["var(--font-sans)", "system-ui", "ui-sans-serif", "sans-serif"]
       },
       colors: {
-        background: "hsl(222.2 84% 4.9%)",
-        foreground: "hsl(210 40% 98%)",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
         muted: {
-          DEFAULT: "hsl(217.2 32.6% 17.5%)",
-          foreground: "hsl(215 20.2% 65.1%)"
+          DEFAULT: "hsl(var(--muted))",
+          foreground: "hsl(var(--muted-foreground))"
         },
         accent: {
-          DEFAULT: "hsl(217.2 91.2% 59.8%)",
-          foreground: "hsl(210 40% 98%)"
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))"
         },
-        border: "hsl(217.2 32.6% 17.5%)",
+        border: "hsl(var(--border))",
         card: {
-          DEFAULT: "hsl(222.2 84% 4.9%)",
-          foreground: "hsl(210 40% 98%)"
+          DEFAULT: "hsl(var(--card))",
+          foreground: "hsl(var(--card-foreground))"
         }
       },
       borderRadius: {
         lg: "0.75rem",
         md: "0.5rem",
         sm: "0.375rem"
+      },
+      maxWidth: {
+        page: "1200px"
       },
       boxShadow: {
         soft: "0 18px 40px rgba(0,0,0,0.45)"

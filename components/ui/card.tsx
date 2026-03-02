@@ -9,7 +9,7 @@ export function Card({ children, className, ...rest }: CardProps) {
   return (
     <section
       className={cn(
-        "glass relative overflow-hidden rounded-lg border-border/80 p-5 sm:p-6 scroll-mt-24",
+        "glass relative overflow-hidden rounded-lg border-border/80 p-5 sm:p-6 scroll-mt-24 transition-shadow duration-150",
         className
       )}
       {...rest}

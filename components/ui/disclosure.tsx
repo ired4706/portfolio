@@ -15,7 +15,7 @@ export function Disclosure({
   return (
     <details
       className={cn(
-        "group rounded-md border border-border/70 bg-slate-950/80 p-3 sm:p-3.5",
+        "group rounded-md border border-border/70 bg-card p-3 sm:p-3.5",
         className
       )}
     >

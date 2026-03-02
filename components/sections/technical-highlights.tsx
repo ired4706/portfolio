@@ -15,9 +15,9 @@ export function TechnicalHighlightsSection() {
           <section
             key={highlight.title}
             aria-label={highlight.title}
-            className="relative flex flex-col justify-between rounded-lg border border-slate-800/80 bg-slate-950/80 p-4 shadow-[0_10px_30px_rgba(0,0,0,0.45)] transition-transform transition-shadow duration-200 hover:-translate-y-0.5 hover:border-slate-500/70 hover:shadow-[0_18px_45px_rgba(0,0,0,0.7)] sm:p-5"
+            className="relative flex flex-col justify-between rounded-lg border border-border/70 bg-card p-4 shadow-[0_10px_30px_rgba(15,23,42,0.45)] transition-transform transition-shadow duration-200 hover:-translate-y-0.5 hover:shadow-[0_18px_45px_rgba(15,23,42,0.7)] sm:p-5"
           >
-            <div className="pointer-events-none absolute inset-px rounded-[inherit] border border-slate-900/70" />
+            <div className="pointer-events-none absolute inset-px rounded-[inherit] border border-border/60" />
             <div className="space-y-2">
               <h3 className="text-sm font-medium">{highlight.title}</h3>
               <p className="text-xs text-muted-foreground">

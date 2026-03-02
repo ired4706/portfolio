@@ -19,9 +19,9 @@ export function ProjectsSection() {
     >
       <article
         aria-labelledby="project-title"
-        className="relative overflow-hidden rounded-xl border border-slate-800/80 bg-slate-950/90 p-5 shadow-[0_18px_45px_rgba(0,0,0,0.75)] transition-transform transition-shadow duration-200 hover:-translate-y-0.5 hover:shadow-[0_24px_60px_rgba(0,0,0,0.9)] sm:p-6"
+        className="relative overflow-hidden rounded-xl border border-border/70 bg-card p-5 shadow-[0_18px_45px_rgba(15,23,42,0.75)] transition-transform transition-shadow duration-200 hover:-translate-y-0.5 hover:shadow-[0_24px_60px_rgba(15,23,42,0.9)] sm:p-6"
       >
-        <div className="pointer-events-none absolute inset-0 rounded-[inherit] border border-slate-900/70" />
+        <div className="pointer-events-none absolute inset-0 rounded-[inherit] border border-border/60" />
         <div className="relative space-y-4">
         <header className="space-y-2">
           <div className="flex flex-wrap items-center gap-2">

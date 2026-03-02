@@ -1,5 +1,7 @@
 import type { ReactNode } from "react";
 import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import { cn } from "@/lib/cn";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -15,11 +17,17 @@ type RootLayoutProps = {
   children: ReactNode;
 };
 
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-sans",
+  display: "swap"
+});
+
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="en" className="dark">
-      <body className="page-shell">
-        <div className="mx-auto flex min-h-screen max-w-5xl flex-col px-4 pb-10 pt-6 sm:px-6 lg:px-8 lg:pt-10">
+    <html lang="en" className={cn(inter.variable)}>
+      <body className={cn("page-shell font-sans")}>
+        <div className="mx-auto flex min-h-screen max-w-page flex-col px-4 pb-10 pt-6 sm:px-6 lg:px-8 lg:pt-10">
           {children}
         </div>
       </body>
