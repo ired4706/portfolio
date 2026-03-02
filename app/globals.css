@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 222.2 84% 4.9%;
+  --foreground: 210 40% 98%;
+  --muted: 217.2 32.6% 17.5%;
+  --muted-foreground: 215 20.2% 65.1%;
+  --accent: 217.2 91.2% 59.8%;
+  --accent-foreground: 210 40% 98%;
+  --border: 217.2 32.6% 17.5%;
+  --card: 222.2 84% 4.9%;
+  --card-foreground: 210 40% 98%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-background text-foreground antialiased text-sm leading-relaxed sm:text-base;
+}
+
+.page-shell {
+  @apply min-h-screen bg-slate-950 text-foreground;
+}
+
+.glass {
+  @apply border border-border/70 bg-slate-900/60 backdrop-blur-xl shadow-soft;
+}
+
+.prose-muted {
+  @apply text-muted-foreground;
+}
+
+.section-block {
+  @apply relative py-6 sm:py-8;
+}
+
+.section-block + .section-block {
+  @apply border-t border-slate-800/60;
+}
+
+.section-block-muted {
+  @apply bg-slate-900/30;
+}
+
+/* Typography scale */
+.type-h1 {
+  @apply text-3xl font-semibold tracking-tight leading-tight sm:text-4xl md:text-5xl;
+}
+
+.type-h2 {
+  @apply text-2xl font-semibold tracking-tight leading-snug sm:text-3xl;
+}
+
+.type-h3 {
+  @apply text-lg font-semibold leading-snug sm:text-xl;
+}
+
+.type-body {
+  @apply text-sm leading-relaxed sm:text-base;
+}
+
+/* Rich text blocks in sections */
+.prose {
+  @apply type-body space-y-3;
+}
+
+.prose p {
+  @apply type-body;
+}
+
+.prose ul {
+  @apply space-y-1.5;
+}
+
+.prose li {
+  @apply leading-relaxed;
+}
