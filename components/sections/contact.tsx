@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { SectionShell } from "@/components/ui/section-shell";
 import { Button } from "@/components/ui/button";
 import { links } from "@/data/links";
@@ -24,14 +23,14 @@ export function ContactSection() {
       <div className="flex flex-wrap items-center gap-3">
         {primary && (
           <Button asChild>
-            <Link href={primary.href}>{primary.label}</Link>
+            <a href={primary.href}>{primary.label}</a>
           </Button>
         )}
 
         {secondary.length > 0 && (
           <div className="flex flex-wrap gap-3 text-xs text-muted-foreground sm:text-sm">
             {secondary.map((link) => (
-              <Link
+              <a
                 key={link.href}
                 href={link.href}
                 target="_blank"
@@ -39,7 +38,7 @@ export function ContactSection() {
                 className="underline-offset-4 hover:text-foreground hover:underline"
               >
                 {link.label}
-              </Link>
+              </a>
             ))}
           </div>
         )}
