@@ -73,9 +73,27 @@ body {
 }
 
 .prose ul {
-  @apply space-y-1.5;
+  @apply space-y-1.5 list-none pl-4;
 }
 
 .prose li {
   @apply leading-relaxed;
+}
+
+.list-dash {
+  @apply list-none pl-4 space-y-1.5;
+}
+
+.list-dash li {
+  @apply leading-relaxed;
+  position: relative;
+  padding-left: 0.75rem;
+}
+
+.list-dash li::before {
+  content: "-";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: rgb(148 163 184); /* slate-400 */
 }

@@ -45,7 +45,7 @@ export function ArchitectureCaseStudySection() {
             Frontend architecture approach
           </h4>
 
-          <ul className="space-y-1.5 text-xs text-muted-foreground sm:text-sm">
+          <ul className="list-dash text-xs text-muted-foreground sm:text-sm">
             <li>
               Structured the application by business domains (orders, catalog,
               CRM, logistics, analytics) to avoid cross-module coupling.
@@ -71,7 +71,7 @@ export function ArchitectureCaseStudySection() {
             Performance strategy
           </h4>
 
-          <ul className="space-y-1.5 text-xs text-muted-foreground sm:text-sm">
+          <ul className="list-dash text-xs text-muted-foreground sm:text-sm">
             <li>
               Optimised heavy dashboards and tables using memoisation,
               pagination, and lazy loading.

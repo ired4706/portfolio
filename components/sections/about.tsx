@@ -19,27 +19,27 @@ export function AboutSection() {
       </div>
 
       <div className="space-y-3 text-xs text-muted-foreground">
-        <div>
-          <p className="text-[11px] font-medium uppercase tracking-[0.16em]">
+        <section className="space-y-2">
+          <h4 className="text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
             Core strengths
-          </p>
-          <ul className="mt-1 space-y-1">
+          </h4>
+          <ul className="list-dash text-xs text-muted-foreground sm:text-sm">
             <li>Modular frontend architecture</li>
             <li>Clear server vs client state separation</li>
             <li>Reusable UI infrastructure</li>
             <li>Performance optimization for data-heavy interfaces</li>
           </ul>
-        </div>
+        </section>
 
-        <div>
-          <p className="text-[11px] font-medium uppercase tracking-[0.16em]">
+        <section className="space-y-2">
+          <h4 className="text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
             Growth focus
-          </p>
-          <ul className="mt-1 space-y-1">
+          </h4>
+          <ul className="list-dash text-xs text-muted-foreground sm:text-sm">
             <li>Frontend system design at scale</li>
             <li>Improving engineering standards and developer experience</li>
           </ul>
-        </div>
+        </section>
       </div>
     </SectionShell>
   );

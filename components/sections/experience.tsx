@@ -29,7 +29,7 @@ export function ExperienceSection() {
               </div>
               <Tag className="text-[10px]">{role.period}</Tag>
             </div>
-            <ul className="mt-3 space-y-1.5 text-xs text-muted-foreground sm:text-sm">
+            <ul className="mt-3 list-dash text-xs text-muted-foreground sm:text-sm">
               {role.items.map((item) => (
                 <li key={item}>{item}</li>
               ))}

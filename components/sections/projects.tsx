@@ -59,7 +59,7 @@ export function ProjectsSection() {
           </Disclosure>
 
           <Disclosure title="Technical decisions">
-            <ul className="space-y-1.5">
+            <ul className="list-dash">
               {main.technicalDecisions.map((item) => (
                 <li key={item}>{item}</li>
               ))}
@@ -67,7 +67,7 @@ export function ProjectsSection() {
           </Disclosure>
 
           <Disclosure title="Impact">
-            <ul className="space-y-1.5">
+            <ul className="list-dash">
               {main.impact.map((item) => (
                 <li key={item}>{item}</li>
               ))}
